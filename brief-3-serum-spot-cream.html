@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Brief 3 · Nền và Nét</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brief một cột cho creator, cùng hệ thống với bộ hướng dẫn Retinal Peptide. Bạc/graphite + vàng serum */
+:root{
+  --bg:#EDEFF2; --surface:#FFFFFF; --sunken:#F5F6F8; --ink:#1A1D22; --muted:#5B626D; --line:#D6DAE0;
+  --graphite:#2F3640; --on-graphite:#F2F3F5; --cream:#E9D63A; --cream-ink:#1A1D22; --warn:#A5562A; --good:#2F7A55;
+  --f-display:"Be Vietnam Pro",system-ui,"Segoe UI",Arial,sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,"Segoe UI",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121417; --surface:#1A1D22; --sunken:#16191D; --ink:#E7E9EC; --muted:#9AA1AB; --line:#2D3239;
+  --graphite:#C9CED6; --on-graphite:#14171B; --cream:#E3D04A; --cream-ink:#14171B; --warn:#E0965F; --good:#6CC093; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#1A1D22; --sunken:#16191D; --ink:#E7E9EC; --muted:#9AA1AB; --line:#2D3239;
+  --graphite:#C9CED6; --on-graphite:#14171B; --cream:#E3D04A; --cream-ink:#14171B; --warn:#E0965F; --good:#6CC093; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:52px}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-0.01em}
+p{margin:0} ul,ol{margin:0;padding-left:18px;display:grid;gap:5px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+.vn{font-family:var(--f-display);font-weight:700}
+section{display:grid;gap:18px}
+.sh{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:20px}
+.sh h2{font-size:22px}
+.sh p{color:var(--muted)}
+a{color:inherit}
+.hero{background:var(--graphite);color:var(--on-graphite);border-radius:14px;padding:32px clamp(20px,4vw,40px);display:grid;gap:18px}
+.hero .eyebrow{color:inherit;opacity:.7}
+.hero h1{font-size:clamp(26px,4vw,36px);font-weight:700}
+.hookline{display:grid;gap:6px;border-left:4px solid var(--cream);padding-left:18px}
+.hookline .vn{font-size:clamp(24px,4.4vw,40px);line-height:1.2;font-weight:800}
+.hookline .ko{font-size:15px;opacity:.85}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:12.5px;font-weight:600;padding:3px 11px;border-radius:999px;border:1px solid currentColor;opacity:.9}
+.pill.cream{background:var(--cream);color:var(--cream-ink);border-color:var(--cream);opacity:1}
+.series{font-size:13px;opacity:.8}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{font-size:12px;color:var(--muted);background:var(--sunken);font-weight:600}
+tbody th{font-weight:600;width:120px;color:var(--muted);font-size:13px}
+td.serum{background:color-mix(in srgb,var(--cream) 16%,var(--surface))}
+td.spot{background:color-mix(in srgb,var(--graphite) 8%,var(--surface))}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.callout{background:var(--sunken);border-radius:10px;padding:14px 18px;font-size:14.5px}
+.callout.strong{border-left:4px solid var(--graphite)}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.card h3{font-size:16px}
+.card p{font-size:14px;color:var(--muted)}
+.card .num{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;font-size:14px}
+.facts div{display:grid;gap:2px;min-width:0}
+.facts dt{font-size:12px;color:var(--muted);font-weight:600}
+.facts dd{margin:0}
+.hooks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hook{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:4px;min-width:0}
+.hook.main{grid-column:1/-1;border-color:var(--graphite)}
+.hook .tag{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.04em}
+.hook .vn{font-size:19px}
+.hook.main .vn{font-size:24px}
+.hook .why{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px}
+.scene{font-size:14px;background:var(--sunken);border-radius:8px;padding:10px 14px}
+.causes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cause{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.cause h3{font-size:16px}
+.cause p{font-size:14px;color:var(--muted)}
+.cause .ans{font-size:14px;color:var(--ink);background:var(--sunken);border-radius:8px;padding:8px 12px}
+.cause.key{border:2px solid var(--graphite)}
+.keytag{justify-self:start;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--graphite);color:var(--on-graphite)}
+.msgs{display:grid;gap:10px}
+.msg{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 20px;font-size:14.5px}
+.msg h3{font-size:15.5px}
+.warnnote{color:var(--warn);font-size:13.5px}
+.tl{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.tl-row{display:grid;grid-template-columns:96px minmax(0,1fr) minmax(0,1.1fr);gap:16px;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px;align-items:start}
+.tl-row:last-child{border-bottom:0}
+.tl-row.head{background:var(--sunken);font-size:12px;font-weight:600;color:var(--muted)}
+.tl-t{font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:13px}
+.tl-row.hl{background:color-mix(in srgb,var(--cream) 14%,var(--surface))}
+.tl-row.hl2{background:color-mix(in srgb,var(--graphite) 8%,var(--surface))}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;gap:2px}
+.bar i{display:block;height:100%;background:var(--line)}
+.bar i.h{background:var(--graphite)} .bar i.p{background:var(--cream)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:10px;align-content:start;font-size:14px;min-width:0}
+.rule h3{font-size:15px}
+.rule.do h3{color:var(--good)} .rule.dont h3{color:var(--warn)}
+.cast{grid-column:1/-1;background:var(--sunken);border:0}
+.claims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:6px;font-size:14px;align-content:start}
+.claim b{font-size:12px;color:var(--muted)}
+.x{text-decoration:line-through;color:var(--warn)}
+.checks{background:var(--graphite);color:var(--on-graphite);border-radius:12px;padding:22px 24px;display:grid;gap:12px}
+.checks h2{font-size:19px}
+.checks ol,.checks ul{gap:8px;font-size:14.5px}
+.checks .muted{color:inherit;opacity:.75}
+.formula{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.formula .side{border-radius:10px;padding:18px 20px;display:grid;gap:4px;min-width:0}
+.formula .side.serum{background:var(--cream);color:var(--cream-ink)}
+.formula .side.spot{background:var(--graphite);color:var(--on-graphite)}
+.formula .side .vn{font-size:22px}
+.formula .side .ko{font-size:14px;opacity:.85}
+.formula .side .role{font-size:13px;opacity:.8;margin-top:6px}
+.formula .plus{align-self:center;font-family:var(--f-mono);font-size:28px;color:var(--muted)}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.qa .q{font-size:16px;font-weight:600}
+.qa .a{font-size:14px;color:var(--muted)}
+.qa .a b{color:var(--ink)}
+.qa.key{border:2px solid var(--graphite)}
+.slides{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.slide{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:6px;align-content:start;min-width:0;aspect-ratio:4/5}
+.slide .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.slide h4{font-size:14px}
+.slide .vn{font-size:13px;color:var(--muted);font-weight:500}
+.slide p{font-size:12.5px;color:var(--muted)}
+.slide.cover{background:var(--graphite);color:var(--on-graphite)}
+.slide.cover .n,.slide.cover .vn,.slide.cover p{color:inherit;opacity:.8}
+.slide.cta{background:color-mix(in srgb,var(--cream) 22%,var(--surface))}
+.caption{background:var(--sunken);border-radius:10px;padding:14px 18px;font-size:14px;display:grid;gap:6px}
+.caption .vn{font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:16px 18px;display:grid;gap:4px;min-width:0}
+.stat b{font-family:var(--f-mono);font-size:24px;font-weight:500;letter-spacing:-0.02em}
+.stat span{font-size:13px;color:var(--muted)}
+.briefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.brief{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:grid;gap:10px;align-content:start;min-width:0;text-decoration:none}
+.brief .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.brief h3{font-size:18px}
+.brief .hk{font-family:var(--f-display);font-weight:700;font-size:16px;border-left:3px solid var(--cream);padding-left:10px}
+.brief p{font-size:14px;color:var(--muted)}
+.brief .pills{display:flex;flex-wrap:wrap;gap:6px}
+.brief .pill{color:var(--muted);opacity:1;font-size:12px}
+.brief .go{font-size:14px;font-weight:600;color:var(--ink)}
+footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:grid;gap:4px}
+@media (max-width:960px){.slides{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.three,.causes,.claims,.faq,.stats,.briefs{grid-template-columns:1fr}.msg{grid-template-columns:1fr;gap:6px}.formula{grid-template-columns:1fr}.formula .plus{justify-self:center}.facts{grid-template-columns:1fr}}
+@media (max-width:640px){.hooks,.rules{grid-template-columns:1fr}.slides{grid-template-columns:repeat(2,minmax(0,1fr))}.tl-row{grid-template-columns:64px minmax(0,1fr);gap:10px}.tl-row > :nth-child(3){grid-column:2}.tl-row.head > :nth-child(3){display:none}.wrap{gap:40px;padding-block:24px 56px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">VT Retinal Peptide Serum + Spot Cream · Brief nội dung TikTok · 11/2026</span>
+  <h1>Brief 3 · Góc "Nền và Nét"</h1>
+  <div class="hookline">
+    <span class="vn">Serum là nền, spot cream là nét.</span>
+    <span class="ko">Công thức chính của bài. Lặp lại ít nhất 2 lần trong nội dung.</span>
+  </div>
+  <div class="meta"><span class="pill cream">Ưu tiên ảnh carousel 6 slide</span><span class="pill">Video: 45–55 giây</span><span class="pill">Tối đa 2 sản phẩm, kem dưỡng chỉ nhắc bằng lời</span><span class="pill">Giá · link bắt buộc</span></div>
+  <p class="series">Bộ brief Retinal Peptide gồm 3 phần · <a href="index.html">Xem toàn bộ và quy tắc chung</a> · Brief này dành cho creator đã từng đăng một trong hai sản phẩm</p>
+</header>
+
+<section>
+  <div class="sh"><span class="eyebrow">Ý tưởng</span><h2>Đây là một buổi tư vấn, không phải quảng cáo combo</h2><p>Người xem thấy hai lọ đều là retinal sẽ hỏi ngay: sao cần hai? dùng chung có quá liều không? Bài này trả lời bằng một ý: hai sản phẩm có vai trò khác nhau vì vùng da khác nhau. Sau đó là thứ tự, lịch bắt đầu, và câu trả lời thật lòng "nếu chỉ mua một".</p></div>
+  <p class="callout strong">Bài về 2 sản phẩm thường ít lượt xem hơn bài về 1 sản phẩm, nhưng được lưu nhiều hơn và có nhiều câu hỏi mua hơn. Vì vậy mục tiêu của brief này là <b>lượt lưu và bình luận hỏi mua</b>, không phải lượt xem. Ảnh carousel làm việc này tốt hơn video.</p>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Công thức</span><h2>Nền và Nét</h2><p>Trả lời câu "sao cần hai lọ" trước khi người xem kịp hỏi. Serum là nền cho cả mặt, spot cream là nét cho từng đường nhăn.</p></div>
+  <div class="formula">
+    <div class="side serum"><span class="eyebrow" style="color:inherit;opacity:.7">Serum</span><span class="vn">Nền</span><span class="ko">Cả mặt</span><span class="role">Kết cấu da, độ đàn hồi, màu da. Bước đầu sau rửa mặt, thoa mỏng một lớp.</span></div>
+    <div class="plus">+</div>
+    <div class="side spot"><span class="eyebrow" style="color:inherit;opacity:.7">Spot cream</span><span class="vn">Nét</span><span class="ko">Từng đường nhăn</span><span class="role">Khóe mắt, rãnh cười, giữa hai chân mày, cổ. Sau khi serum thấm, kẻ theo nếp.</span></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Serum (Nền)</th><th>Spot cream (Nét)</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Vùng da</th><td class="serum">Cả mặt, tránh sát mí mắt và môi</td><td class="spot">Đường nhăn: khóe mắt, rãnh cười, giữa chân mày, 3 đường ở cổ</td></tr>
+      <tr><th scope="row">Lượng · động tác</th><td class="serum">Thoa mỏng một lớp, vuốt đều</td><td class="spot">Đầu tuýp nhỏ kẻ theo nếp, vuốt từ dưới lên 3 lần</td></tr>
+      <tr><th scope="row">Thứ tự</th><td class="serum">Bước 1 · ngay sau rửa mặt</td><td class="spot">Bước 2 · sau khi serum thấm · rồi khóa bằng kem dưỡng</td></tr>
+      <tr><th scope="row">Tần suất bắt đầu</th><td class="serum">2 tuần đầu: 2–3 tối/tuần</td><td class="spot">Thêm vào sau khi quen serum 2 tuần, ban đầu cách ngày</td></tr>
+      <tr><th scope="row">Cảnh chứng minh</th><td class="serum">Sáng hôm sau, tay vuốt má</td><td class="spot">Cận 3 đường kem vàng trên nếp</td></tr>
+      <tr><th scope="row">Chung cho cả hai</th><td colspan="2">Dùng buổi tối · Sáng bắt buộc chống nắng · AHA/BHA/vitamin C để tối khác · Thử sau tai trước · "Retinal làm mới bề mặt da, peptide chăm độ đàn hồi"</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Hook · 3 giây đầu</span><h2>Chọn một câu hook</h2><p>Hook của bài combo là nhận lấy chính sự nghi ngờ của người xem: "sao cần hai?". Nghe giống quảng cáo set là mất ngay bình luận hỏi mua.</p></div>
+  <p class="scene"><b>Hình ảnh</b> Tay đang thoa serum cả mặt → cắt ngay sang cận nếp nhăn khóe mắt. Hai sản phẩm chưa xuất hiện rõ. Nếu làm carousel, đây là slide bìa.</p>
+  <div class="hooks">
+    <div class="hook main"><span class="tag">Hook chính · Nhận lấy nghi ngờ</span><span class="vn">Bôi serum cả mặt rồi, sao nếp nhăn vẫn còn?</span><span class="why">Câu trả lời "Vì nếp cần chấm riêng" dẫn thẳng vào công thức Nền và Nét.</span></div>
+    <div class="hook"><span class="tag">Thay thế · Công thức</span><span class="vn">Một em cho cả mặt, một em cho từng nếp.</span><span class="why">Hợp nhất với slide bìa carousel.</span></div>
+    <div class="hook"><span class="tag">Thay thế · Nỗi lo quá liều</span><span class="vn">Hai lọ retinal dùng chung, có quá liều không?</span><span class="why">Trả lời bằng lịch bắt đầu: serum trước, 2 tuần sau thêm spot cream.</span></div>
+    <div class="hook"><span class="tag">Thay thế · Đã mua lại</span><span class="vn">Lọ serum thứ hai rồi, lần này mình thêm em chấm.</span><span class="why">Chỉ dùng khi bạn thật sự đã dùng hết một lọ serum.</span></div>
+    <div class="hook"><span class="tag">Thay thế · Thứ tự</span><span class="vn">Cả mặt trước, từng nếp sau.</span><span class="why">Ngắn, hợp làm phụ đề lặp lại.</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Hỏi đáp</span><h2>4 câu người xem sẽ hỏi, trả lời sẵn trong bài</h2><p>Để sẵn 4 câu trả lời này trên phụ đề, bình luận sẽ chuyển từ "dùng sao" sang "mua ở đâu".</p></div>
+  <div class="faq">
+    <div class="qa key"><span class="keytag">Quan trọng nhất</span><div class="q">Cả hai đều retinal, sao cần hai lọ?</div><div class="a"><b>Vì vùng da khác nhau.</b> Serum trải mỏng cả mặt, spot cream nằm lại trên đường nhăn. Chỉ serum thì đường nhăn không đủ lượng; chỉ spot cream thì phần mặt còn lại bị bỏ trống.</div></div>
+    <div class="qa"><div class="q">Dùng chung có quá liều không?</div><div class="a"><b>Không bắt đầu cùng ngày.</b> Serum 2 tuần để da quen (2–3 tối/tuần) → thêm spot cream cách ngày → quen cả hai rồi mới dùng cùng một tối. Nếu rát lan rộng, bỏ spot cream trước.</div></div>
+    <div class="qa"><div class="q">Thứ tự bôi thế nào?</div><div class="a"><b>Rửa mặt → serum cả mặt → đợi thấm → spot cream theo nếp → kem dưỡng.</b> Buổi sáng nghỉ cả hai, chỉ chống nắng.</div></div>
+    <div class="qa"><div class="q">Nếu chỉ mua một thì mua gì?</div><div class="a"><b>Trả lời thật.</b> Chưa có đường nhăn rõ: bắt đầu bằng serum. Đã thấy nếp ở khóe mắt, rãnh cười, cổ: bắt đầu bằng spot cream. Có câu này bài mới đọc như tư vấn, không phải quảng cáo set.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Định dạng A · ưu tiên</span><h2>Ảnh carousel 6 slide</h2><p>Khổ dọc 4:5, mỗi slide tối đa 2 dòng chữ. Dùng ảnh thật của bạn, không dùng ảnh sản phẩm do hãng cung cấp làm slide chính.</p></div>
+  <div class="slides">
+    <div class="slide cover"><span class="n">1 · Bìa</span><h4>Hook</h4><span class="vn">Bôi serum cả mặt rồi, sao nếp nhăn vẫn còn?</span><p>Tay thoa serum + cận nếp khóe mắt</p></div>
+    <div class="slide"><span class="n">2 · Trả lời</span><h4>Nền và Nét</h4><span class="vn">Serum là nền, spot cream là nét</span><p>Hai sản phẩm cạnh nhau, mỗi bên một dòng vai trò</p></div>
+    <div class="slide"><span class="n">3 · Thứ tự</span><h4>Rửa mặt → Serum → Chấm → Kem</h4><span class="vn">4 bước, 4 ảnh tay thật</span><p>Không dùng icon</p></div>
+    <div class="slide"><span class="n">4 · Bản đồ</span><h4>Ở đâu, bao nhiêu</h4><span class="vn">Serum: cả mặt, mỏng · Chấm: mắt, rãnh cười, giữa mày, cổ</span><p>Ảnh mặt bạn, đánh dấu vùng và đường</p></div>
+    <div class="slide"><span class="n">5 · Lịch</span><h4>Không bắt đầu cùng ngày</h4><span class="vn">Tuần 1–2 serum · Tuần 3 thêm chấm cách ngày · Tối retinal, sáng chống nắng</span><p>Trình bày dạng lịch</p></div>
+    <div class="slide cta"><span class="n">6 · CTA</span><h4>Giá · Link · Hợp da nào</h4><span class="vn">Kèm câu "nếu chỉ mua một"</span><p>Giá và link theo thông báo của team VT</p></div>
+  </div>
+  <div class="caption"><span class="eyebrow">Caption mẫu (khoảng 40 chữ chưa tính tag, dòng đầu không phải câu quảng cáo)</span><span class="vn">Serum cho cả mặt, chấm cho từng nếp. Da hỗn hợp, mới dùng retinal. Giá + link ở ảnh cuối.</span><span class="muted">Nên nhắc loại da của bạn và để giá ở slide cuối. Hai điều này giúp người xem quyết định nhanh hơn.</span></div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Định dạng B</span><h2>Video khoảng 50 giây</h2><p>Vì có hai sản phẩm nên sản phẩm xuất hiện sớm hơn (giây 10). Nhưng 3 giây đầu vẫn chỉ là câu hỏi, chưa có sản phẩm.</p></div>
+  <div class="bar" aria-label="Tỷ lệ: hook và trả lời 10 giây, serum 10 giây, spot cream 14 giây, lịch và lưu ý 9 giây, CTA 7 giây"><i class="h" style="flex:10"></i><i class="p" style="flex:10"></i><i class="h" style="flex:14"></i><i style="flex:9"></i><i style="flex:7"></i></div>
+  <div class="legend"><span style="--c:var(--graphite)">Hook · spot cream · cách dùng</span><span style="--c:var(--cream)">Serum</span><span style="--c:var(--line)">Lịch · CTA</span></div>
+  <div class="tl">
+    <div class="tl-row head"><span>Thời gian</span><span>Hình ảnh</span><span>Lời thoại · phụ đề</span></div>
+    <div class="tl-row"><span class="tl-t">0–3s</span><span>Tay thoa serum → cắt sang cận nếp khóe mắt</span><span>Bôi serum cả mặt rồi, sao nếp nhăn vẫn còn?</span></div>
+    <div class="tl-row"><span class="tl-t">3–10s</span><span>Hai sản phẩm, mỗi tay một lọ, trái phải</span><span>Vì nếp cần chấm riêng. Serum là nền, spot cream là nét.</span></div>
+    <div class="tl-row hl"><span class="tl-t">10–20s</span><span>Sau rửa mặt, serum thoa mỏng cả mặt, texture vàng trên mu bàn tay</span><span>Bước 1: serum, cả mặt, bôi mỏng. Retinal + 9 peptide</span></div>
+    <div class="tl-row hl2"><span class="tl-t">20–34s</span><span>Cận đầu tuýp spot cream → kẻ khóe mắt, rãnh cười → ngẩng đầu kẻ 3 đường ở cổ → vuốt từ dưới lên</span><span>Bước 2: chấm theo nếp. Khóe mắt · rãnh cười · 3 đường ở cổ</span></div>
+    <div class="tl-row"><span class="tl-t">34–43s</span><span>Phụ đề dạng lịch + cảnh chống nắng buổi sáng</span><span>Không bắt đầu cùng ngày. Serum 2 tuần → thêm chấm cách ngày · Tối retinal, sáng chống nắng</span></div>
+    <div class="tl-row"><span class="tl-t">43–50s</span><span>Sáng hôm sau: vuốt má, khoe đường cổ → phụ đề giá và link</span><span>Chỉ mua một? Chưa có nếp: serum. Có nếp rồi: chấm. · (giá · link)</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Quy tắc</span><h2>Bắt buộc và nên tránh</h2></div>
+  <div class="rules">
+    <div class="rule do"><h3>Bắt buộc</h3><ul>
+      <li>3 giây đầu là câu hỏi nghi ngờ. Hai sản phẩm xuất hiện sau giây thứ 3</li>
+      <li>Câu "Serum là nền, spot cream là nét" xuất hiện trên phụ đề ít nhất 2 lần</li>
+      <li>Hai động tác khác nhau rõ ràng: serum là thoa mặt (vùng), spot cream là kẻ đường (nét)</li>
+      <li>Phụ đề cố định: "Không bắt đầu cùng ngày" và lịch serum → spot cream</li>
+      <li>Phải có câu trả lời "nếu chỉ mua một"</li>
+      <li>Giá, link và loại da của bạn ở slide cuối hoặc 7 giây cuối</li>
+    </ul></div>
+    <div class="rule dont"><h3>Nên tránh</h3><ul>
+      <li>Thêm kem capsule, mặt nạ hay sản phẩm thứ ba vào video</li>
+      <li>Thoa hai sản phẩm cùng một kiểu động tác, người xem sẽ lẫn vai trò</li>
+      <li>Mở đầu bằng "mua set được giảm giá"</li>
+      <li>Nói "hiệu quả gấp đôi" hay "phải dùng cả hai mới có tác dụng"</li>
+      <li>Đặt mục tiêu lượt xem cho bài này</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Cách nói</span><h2>Được nói và không được nói</h2></div>
+  <div class="claims">
+    <div class="claim"><b>Công dụng</b><p><span class="x">Xóa nhăn, trị nhăn tận gốc</span></p><p>Hỗ trợ cải thiện nếp nhăn và kết cấu da</p></div>
+    <div class="claim"><b>Về combo</b><p><span class="x">Hiệu quả gấp đôi, phải dùng cả hai</span></p><p>Chỉ nói đến mức "vùng da khác nhau nên vai trò khác nhau". Không đưa con số về hiệu quả cộng hưởng</p></div>
+    <div class="claim"><b>Lưu ý khi dùng hai sản phẩm retinal</b><p>Không bắt đầu cùng ngày · Cả hai dùng buổi tối · Sáng chống nắng · Rát lan rộng thì ngừng spot cream trước · Đang mang thai hoặc cho con bú: hỏi bác sĩ trước</p></div>
+  </div>
+</section>
+
+<section class="checks">
+  <h2>Trước khi đăng</h2>
+  <ul>
+    <li>Gửi bản nháp cho team VT Việt Nam duyệt trước khi đăng (nội dung, phụ đề, cách nói về công dụng)</li>
+    <li>Giá, link set hoặc hai link riêng lấy theo thông báo của team VT cho từng đợt</li>
+    <li>Bật nhãn nội dung thương mại theo quy định của TikTok. Dòng đầu caption không bắt đầu bằng câu quảng cáo</li>
+    <li>Tag @vtcosmetics_vietnam · #VTcosmetics #Kbeauty · hashtag sản phẩm theo thông báo của từng đợt</li>
+    <li>Không chia sẻ brief này ra ngoài</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Tài liệu dành cho creator hợp tác với VT Cosmetics Việt Nam. Câu thoại tiếng Việt chỉ là gợi ý về cấu trúc, hãy nói theo cách của bạn.</span>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Bộ brief Retinal Peptide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brief một cột cho creator, cùng hệ thống với bộ hướng dẫn Retinal Peptide. Bạc/graphite + vàng serum */
+:root{
+  --bg:#EDEFF2; --surface:#FFFFFF; --sunken:#F5F6F8; --ink:#1A1D22; --muted:#5B626D; --line:#D6DAE0;
+  --graphite:#2F3640; --on-graphite:#F2F3F5; --cream:#E9D63A; --cream-ink:#1A1D22; --warn:#A5562A; --good:#2F7A55;
+  --f-display:"Be Vietnam Pro",system-ui,"Segoe UI",Arial,sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,"Segoe UI",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121417; --surface:#1A1D22; --sunken:#16191D; --ink:#E7E9EC; --muted:#9AA1AB; --line:#2D3239;
+  --graphite:#C9CED6; --on-graphite:#14171B; --cream:#E3D04A; --cream-ink:#14171B; --warn:#E0965F; --good:#6CC093; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#1A1D22; --sunken:#16191D; --ink:#E7E9EC; --muted:#9AA1AB; --line:#2D3239;
+  --graphite:#C9CED6; --on-graphite:#14171B; --cream:#E3D04A; --cream-ink:#14171B; --warn:#E0965F; --good:#6CC093; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:52px}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-0.01em}
+p{margin:0} ul,ol{margin:0;padding-left:18px;display:grid;gap:5px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+.vn{font-family:var(--f-display);font-weight:700}
+section{display:grid;gap:18px}
+.sh{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:20px}
+.sh h2{font-size:22px}
+.sh p{color:var(--muted)}
+a{color:inherit}
+.hero{background:var(--graphite);color:var(--on-graphite);border-radius:14px;padding:32px clamp(20px,4vw,40px);display:grid;gap:18px}
+.hero .eyebrow{color:inherit;opacity:.7}
+.hero h1{font-size:clamp(26px,4vw,36px);font-weight:700}
+.hookline{display:grid;gap:6px;border-left:4px solid var(--cream);padding-left:18px}
+.hookline .vn{font-size:clamp(24px,4.4vw,40px);line-height:1.2;font-weight:800}
+.hookline .ko{font-size:15px;opacity:.85}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:12.5px;font-weight:600;padding:3px 11px;border-radius:999px;border:1px solid currentColor;opacity:.9}
+.pill.cream{background:var(--cream);color:var(--cream-ink);border-color:var(--cream);opacity:1}
+.series{font-size:13px;opacity:.8}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{font-size:12px;color:var(--muted);background:var(--sunken);font-weight:600}
+tbody th{font-weight:600;width:120px;color:var(--muted);font-size:13px}
+td.serum{background:color-mix(in srgb,var(--cream) 16%,var(--surface))}
+td.spot{background:color-mix(in srgb,var(--graphite) 8%,var(--surface))}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.callout{background:var(--sunken);border-radius:10px;padding:14px 18px;font-size:14.5px}
+.callout.strong{border-left:4px solid var(--graphite)}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.card h3{font-size:16px}
+.card p{font-size:14px;color:var(--muted)}
+.card .num{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;font-size:14px}
+.facts div{display:grid;gap:2px;min-width:0}
+.facts dt{font-size:12px;color:var(--muted);font-weight:600}
+.facts dd{margin:0}
+.hooks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hook{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:4px;min-width:0}
+.hook.main{grid-column:1/-1;border-color:var(--graphite)}
+.hook .tag{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.04em}
+.hook .vn{font-size:19px}
+.hook.main .vn{font-size:24px}
+.hook .why{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px}
+.scene{font-size:14px;background:var(--sunken);border-radius:8px;padding:10px 14px}
+.causes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cause{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.cause h3{font-size:16px}
+.cause p{font-size:14px;color:var(--muted)}
+.cause .ans{font-size:14px;color:var(--ink);background:var(--sunken);border-radius:8px;padding:8px 12px}
+.cause.key{border:2px solid var(--graphite)}
+.keytag{justify-self:start;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--graphite);color:var(--on-graphite)}
+.msgs{display:grid;gap:10px}
+.msg{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 20px;font-size:14.5px}
+.msg h3{font-size:15.5px}
+.warnnote{color:var(--warn);font-size:13.5px}
+.tl{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.tl-row{display:grid;grid-template-columns:96px minmax(0,1fr) minmax(0,1.1fr);gap:16px;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px;align-items:start}
+.tl-row:last-child{border-bottom:0}
+.tl-row.head{background:var(--sunken);font-size:12px;font-weight:600;color:var(--muted)}
+.tl-t{font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:13px}
+.tl-row.hl{background:color-mix(in srgb,var(--cream) 14%,var(--surface))}
+.tl-row.hl2{background:color-mix(in srgb,var(--graphite) 8%,var(--surface))}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;gap:2px}
+.bar i{display:block;height:100%;background:var(--line)}
+.bar i.h{background:var(--graphite)} .bar i.p{background:var(--cream)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:10px;align-content:start;font-size:14px;min-width:0}
+.rule h3{font-size:15px}
+.rule.do h3{color:var(--good)} .rule.dont h3{color:var(--warn)}
+.cast{grid-column:1/-1;background:var(--sunken);border:0}
+.claims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:6px;font-size:14px;align-content:start}
+.claim b{font-size:12px;color:var(--muted)}
+.x{text-decoration:line-through;color:var(--warn)}
+.checks{background:var(--graphite);color:var(--on-graphite);border-radius:12px;padding:22px 24px;display:grid;gap:12px}
+.checks h2{font-size:19px}
+.checks ol,.checks ul{gap:8px;font-size:14.5px}
+.checks .muted{color:inherit;opacity:.75}
+.formula{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.formula .side{border-radius:10px;padding:18px 20px;display:grid;gap:4px;min-width:0}
+.formula .side.serum{background:var(--cream);color:var(--cream-ink)}
+.formula .side.spot{background:var(--graphite);color:var(--on-graphite)}
+.formula .side .vn{font-size:22px}
+.formula .side .ko{font-size:14px;opacity:.85}
+.formula .side .role{font-size:13px;opacity:.8;margin-top:6px}
+.formula .plus{align-self:center;font-family:var(--f-mono);font-size:28px;color:var(--muted)}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.qa .q{font-size:16px;font-weight:600}
+.qa .a{font-size:14px;color:var(--muted)}
+.qa .a b{color:var(--ink)}
+.qa.key{border:2px solid var(--graphite)}
+.slides{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.slide{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:6px;align-content:start;min-width:0;aspect-ratio:4/5}
+.slide .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.slide h4{font-size:14px}
+.slide .vn{font-size:13px;color:var(--muted);font-weight:500}
+.slide p{font-size:12.5px;color:var(--muted)}
+.slide.cover{background:var(--graphite);color:var(--on-graphite)}
+.slide.cover .n,.slide.cover .vn,.slide.cover p{color:inherit;opacity:.8}
+.slide.cta{background:color-mix(in srgb,var(--cream) 22%,var(--surface))}
+.caption{background:var(--sunken);border-radius:10px;padding:14px 18px;font-size:14px;display:grid;gap:6px}
+.caption .vn{font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:16px 18px;display:grid;gap:4px;min-width:0}
+.stat b{font-family:var(--f-mono);font-size:24px;font-weight:500;letter-spacing:-0.02em}
+.stat span{font-size:13px;color:var(--muted)}
+.briefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.brief{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:grid;gap:10px;align-content:start;min-width:0;text-decoration:none}
+.brief .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.brief h3{font-size:18px}
+.brief .hk{font-family:var(--f-display);font-weight:700;font-size:16px;border-left:3px solid var(--cream);padding-left:10px}
+.brief p{font-size:14px;color:var(--muted)}
+.brief .pills{display:flex;flex-wrap:wrap;gap:6px}
+.brief .pill{color:var(--muted);opacity:1;font-size:12px}
+.brief .go{font-size:14px;font-weight:600;color:var(--ink)}
+footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:grid;gap:4px}
+@media (max-width:960px){.slides{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.three,.causes,.claims,.faq,.stats,.briefs{grid-template-columns:1fr}.msg{grid-template-columns:1fr;gap:6px}.formula{grid-template-columns:1fr}.formula .plus{justify-self:center}.facts{grid-template-columns:1fr}}
+@media (max-width:640px){.hooks,.rules{grid-template-columns:1fr}.slides{grid-template-columns:repeat(2,minmax(0,1fr))}.tl-row{grid-template-columns:64px minmax(0,1fr);gap:10px}.tl-row > :nth-child(3){grid-column:2}.tl-row.head > :nth-child(3){display:none}.wrap{gap:40px;padding-block:24px 56px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">VT Cosmetics Việt Nam · Retinal Peptide · Bộ brief nội dung TikTok · 11/2026</span>
+  <h1>Bộ brief Retinal Peptide dành cho creator</h1>
+  <div class="hookline">
+    <span class="vn">Mỗi video chọn một brief. Không trộn.</span>
+    <span class="ko">Ba brief, ba góc nội dung khác nhau. Chọn brief hợp với làn da và kênh của bạn, rồi làm đúng một góc cho trọn.</span>
+  </div>
+  <div class="meta"><span class="pill cream">3 brief</span><span class="pill">Retinal Peptide Spot Cream · Serum</span><span class="pill">Có phần quy tắc chung ở cuối</span></div>
+</header>
+
+<section>
+  <div class="sh"><span class="eyebrow">Chọn brief</span><h2>Ba góc nội dung</h2></div>
+  <div class="briefs">
+    <a class="brief" href="brief-1-spot-cream.html"><span class="n">Brief 1 · Spot Cream</span><h3>Góc nếp nhăn cổ</h3><span class="hk">Mặt có thể giấu tuổi, nhưng cổ thì không.</span><p>Vùng cổ bị bỏ quên, 3 thói quen gây nếp gấp, và cách kẻ kem theo từng đường nhăn.</p><div class="pills"><span class="pill">60–75 giây</span><span class="pill">1 sản phẩm</span><span class="pill">Cần thấy nếp gấp ở cổ</span></div><span class="go">Mở brief 1 →</span></a>
+    <a class="brief" href="brief-2-serum.html"><span class="n">Brief 2 · Serum</span><h3>Góc "bắt đầu retinal đúng cách"</h3><span class="hk">Retinal không đáng sợ. Dùng sai mới đáng sợ.</span><p>Trả lời 3 nỗi lo của người mới (châm chích, da mình có hợp, dùng chung với gì) rồi chỉ lịch bắt đầu.</p><div class="pills"><span class="pill">45–60 giây</span><span class="pill">1 sản phẩm</span><span class="pill">Hợp người từng ngại retinol</span></div><span class="go">Mở brief 2 →</span></a>
+    <a class="brief" href="brief-3-serum-spot-cream.html"><span class="n">Brief 3 · Serum + Spot Cream</span><h3>Góc "Nền và Nét"</h3><span class="hk">Serum là nền, spot cream là nét.</span><p>Vì sao cần hai lọ, thứ tự, lịch bắt đầu và câu trả lời "nếu chỉ mua một". Ưu tiên ảnh carousel.</p><div class="pills"><span class="pill">Carousel 6 slide hoặc 45–55 giây</span><span class="pill">2 sản phẩm</span><span class="pill">Dành cho creator đã đăng 1 trong 2</span></div><span class="go">Mở brief 3 →</span></a>
+  </div>
+  <p class="callout"><b>Chọn brief nào?</b> Lần đầu hợp tác với dòng Retinal Peptide: chọn brief 1 hoặc 2. Cổ có nếp gấp nhìn thấy được: brief 1. Từng ngại retinol hoặc da nhạy cảm: brief 2. Đã đăng một trong hai sản phẩm trước đó: brief 3.</p>
+</section>
+
+<section>
+  <div class="sh"><span class="eyebrow">Quy tắc chung</span><h2>Áp dụng cho cả ba brief</h2></div>
+  <div class="rules">
+    <div class="rule do"><h3>Luôn làm</h3><ul>
+      <li>3 giây đầu là vấn đề hoặc câu hỏi của người xem, chưa có sản phẩm, chưa có da kết quả</li>
+      <li>Quay da thật của bạn, cận cảnh, ánh sáng nghiêng. Không thay bằng đồ họa</li>
+      <li>Một câu về thành phần là đủ: "Retinal làm mới bề mặt da, peptide chăm độ đàn hồi"</li>
+      <li>Phụ đề cố định cho lưu ý retinal: dùng buổi tối · bắt đầu 2–3 lần/tuần · sáng chống nắng</li>
+      <li>Nói theo giọng của bạn. Câu thoại trong brief là gợi ý về cấu trúc, không phải kịch bản đọc</li>
+      <li>Chụp da ngày 1, 7, 14, 28 cùng góc máy để có video tiếp theo</li>
+    </ul></div>
+    <div class="rule dont"><h3>Không làm</h3><ul>
+      <li>Nói "trị", "xóa", "hết sạch" nếp nhăn, "trắng da cấp tốc". Dùng "hỗ trợ cải thiện"</li>
+      <li>Nhắc tên hoặc dùng hình người nổi tiếng</li>
+      <li>So sánh nồng độ, phần trăm hay tên sản phẩm khác</li>
+      <li>Trộn hai brief trong một video, hoặc thêm sản phẩm thứ ba</li>
+      <li>Giảng về tuổi tác ("25 tuổi là bắt đầu lão hóa")</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="checks">
+  <h2>Trước khi đăng</h2>
+  <ul>
+    <li>Gửi bản nháp cho team VT Việt Nam duyệt trước khi đăng (nội dung, phụ đề, cách nói về công dụng)</li>
+    <li>Giá, link giỏ hàng và hashtag sản phẩm lấy theo thông báo của team VT cho từng đợt</li>
+    <li>Bật nhãn nội dung thương mại theo quy định của TikTok. Dòng đầu caption không bắt đầu bằng câu quảng cáo. Nên nhắc loại da của bạn</li>
+    <li>Tag @vtcosmetics_vietnam · #VTcosmetics #Kbeauty</li>
+    <li>Không chia sẻ bộ brief này ra ngoài</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Tài liệu dành cho creator hợp tác với VT Cosmetics Việt Nam. Cập nhật 11/2026.</span>
+</footer>
+
+</div>
+
+</body>
+</html>
